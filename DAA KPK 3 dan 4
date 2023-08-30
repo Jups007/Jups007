@@ -1,0 +1,16 @@
+def cariFPB(a, b):
+    while b != 0:
+        t = b
+        b = a % b
+        a = t
+    return a
+
+def cariKPK(a, b):
+    fpb = cariFPB(a, b)
+    kpk = (a * b) // fpb
+    return kpk
+
+A = 3
+B = 4
+KPK = cariKPK(A, B)
+print("KPK dari", A, "dan", B, "adalah", KPK)
